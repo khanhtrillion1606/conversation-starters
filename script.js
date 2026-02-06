@@ -1,6 +1,6 @@
 // Dữ liệu câu hỏi (Bạn có thể thêm tùy ý vào đây)
 const questionBank = {
-    deep: [
+    light: [
         "Nếu tiền bạc không còn là vấn đề trên thế giới này, bạn sẽ dùng thời gian của mình để làm gì?",
         "Một ngày 'hoàn hảo' đối với bạn trông như thế nào?",
         "Nếu bạn bị người ngoài hành tinh đưa đi mất, bạn sẽ muốn những người còn ở lại nhớ đến bạn vì điều gì?",
@@ -19,7 +19,7 @@ const questionBank = {
         "Điều gì là 'không thể tha thứ' đối với bạn trong tình yêu?",
         "Biết trước thời điểm một mối quan hệ sẽ kết thúc có phải là một điều may mắn hay không?", 
     ],
-    light: [
+    deep: [
         "Bạn có sở thích nào mà người khác thường thấy kỳ lạ hoặc khó hiểu không?",
         "Nếu bây giờ có một khóa học miễn phí về bất kỳ kỹ năng nào, bạn sẽ đăng ký học gì ngay lập tức",
         "Có điều gì bạn luôn muốn làm nhưng bấy lâu nay vẫn chưa có cơ hội (hoặc dũng cảm) để thử không?",
