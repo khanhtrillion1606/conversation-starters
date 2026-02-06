@@ -60,8 +60,8 @@ main {
 
 /* BỘ BÀI: Đã được làm to lên và thêm hiệu ứng đổ bóng sâu */
 .deck {
-    width: 260px;  /* Tăng kích thước */
-    height: 380px; /* Tăng kích thước */
+    width: 300px;  /* Tăng kích thước */
+    height: 400px; /* Tăng kích thước */
     background: var(--primary-gradient);
     border: 2px solid var(--accent-color); /* Thêm viền vàng đồng */
     border-radius: 15px;
@@ -141,27 +141,4 @@ main {
 
 .hidden {
     display: none;
-}
-
-/* Định nghĩa hiệu ứng hiện hình */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px); /* Đẩy xuống 20px khi bắt đầu */
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);    /* Về vị trí cũ */
-    }
-}
-
-/* Áp dụng vào phần chứa câu hỏi */
-.card-content {
-    /* ... các thuộc tính cũ giữ nguyên ... */
-    animation: fadeInUp 0.6s ease-out; /* Chạy hiệu ứng trong 0.6 giây */
-}
-
-/* Thêm một chút hiệu ứng cho nút bấm khi ẩn/hiện */
-#done-btn {
-    animation: fadeInUp 0.8s ease-out;
 }
