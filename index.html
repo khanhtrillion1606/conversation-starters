@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IceBreaker - Trò Chuyện Thân Mật</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1>IceBreaker</h1>
+            <p>Chạm để bắt đầu câu chuyện</p>
+        </header>
+
+        <main>
+            <div id="deck" class="deck">
+                <div class="card-back">
+                    <span>?</span>
+                </div>
+            </div>
+
+            <div id="card-display" class="card-display hidden">
+                <div class="card-content">
+                    <p id="question-text">Câu hỏi sẽ hiện ở đây...</p>
+                </div>
+                <button id="done-btn" class="primary-btn">Đã trả lời</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
