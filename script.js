@@ -47,10 +47,19 @@ function getNextQuestion() {
 deck.addEventListener('click', () => {
     const nextQ = getNextQuestion();
     
-    // Hiệu ứng hiện câu hỏi
+    // Cập nhật nội dung câu hỏi
     questionText.innerText = nextQ;
+    
+    // Ẩn bộ bài, hiện thẻ bài
     deck.classList.add('hidden');
     cardDisplay.classList.remove('hidden');
+
+    // MẸO: Reset animation bằng cách xóa và thêm lại class hoặc ép trình duyệt vẽ lại
+    // Ở đây chúng ta chỉ cần đảm bảo card-content luôn được "làm mới"
+    const cardContent = document.querySelector('.card-content');
+    cardContent.style.animation = 'none'; // Tắt animation cũ
+    cardContent.offsetHeight; // Ép trình duyệt load lại (reflow)
+    cardContent.style.animation = null; // Kích hoạt lại animation từ CSS
 });
 
 // Sự kiện quay lại bộ bài
