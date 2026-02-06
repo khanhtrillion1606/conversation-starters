@@ -1,8 +1,10 @@
 :root {
-    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --bg-color: #f8f9fa;
-    --card-bg: #ffffff;
-    --text-color: #2d3436;
+    /* Bảng màu tối, chữ be (beige) */
+    --bg-color: #1a1a1a;        /* Đen xám sâu */
+    --card-bg: #2d2d2d;         /* Xám nhạt hơn cho lá bài */
+    --text-main: #f5f5dc;       /* Màu Beige cho chữ */
+    --accent-color: #d4af37;    /* Màu vàng đồng làm điểm nhấn */
+    --primary-gradient: linear-gradient(145deg, #232323, #3d3d3d);
 }
 
 * {
@@ -12,37 +14,40 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    /* Sử dụng font Serif cho cảm giác hoài cổ, nghệ thuật */
+    font-family: 'Playfair Display', serif;
     background-color: var(--bg-color);
-    color: var(--text-color);
+    color: var(--text-main);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden; /* Tránh cuộn trang trên mobile */
+    overflow: hidden;
 }
 
 .app-container {
     width: 100%;
-    max-width: 400px;
+    max-width: 450px; /* Tăng nhẹ độ rộng trên mobile */
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 30px 20px;
     text-align: center;
 }
 
 header h1 {
-    font-size: 2rem;
-    margin-bottom: 5px;
-    background: var(--primary-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: var(--accent-color);
 }
 
 header p {
+    font-family: 'Inter', sans-serif; /* Subtitle giữ font không chân cho dễ đọc */
     font-size: 0.9rem;
-    color: #636e72;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 main {
@@ -53,18 +58,23 @@ main {
     align-items: center;
 }
 
-/* Giao diện bộ bài */
+/* BỘ BÀI: Đã được làm to lên và thêm hiệu ứng đổ bóng sâu */
 .deck {
-    width: 220px;
-    height: 320px;
+    width: 260px;  /* Tăng kích thước */
+    height: 380px; /* Tăng kích thước */
     background: var(--primary-gradient);
-    border-radius: 20px;
+    border: 2px solid var(--accent-color); /* Thêm viền vàng đồng */
+    border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+}
+
+.deck:hover {
+    transform: translateY(-10px);
 }
 
 .deck:active {
@@ -72,48 +82,61 @@ main {
 }
 
 .card-back span {
-    font-size: 5rem;
-    color: white;
-    font-weight: bold;
+    font-size: 6rem;
+    color: var(--accent-color);
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
 
-/* Giao diện lá bài hiện ra */
+/* LÁ BÀI KHI HIỆN CÂU HỎI */
 .card-display {
     width: 100%;
-    height: 80%;
+    height: 70%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-content {
-    background: white;
-    padding: 40px 20px;
-    border-radius: 25px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-    min-height: 250px;
+    background: var(--card-bg);
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    min-height: 300px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #question-text {
-    font-size: 1.4rem;
-    line-height: 1.6;
-    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-style: italic; /* Chữ nghiêng cho câu hỏi thêm phần 'chill' */
+    color: var(--text-main);
 }
 
+/* NÚT BẤM */
 .primary-btn {
-    margin-top: 30px;
-    padding: 15px 40px;
-    border: none;
-    border-radius: 50px;
-    background: var(--primary-gradient);
-    color: white;
-    font-size: 1rem;
+    margin-top: 40px;
+    padding: 12px 35px;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px; /* Nút vuông vức hơn một chút cho sang */
+    background: transparent;
+    color: var(--accent-color);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     cursor: pointer;
-    box-shadow: 0 5px 15px rgba(118, 75, 162, 0.3);
+    transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+    background: var(--accent-color);
+    color: #1a1a1a;
 }
 
 .hidden {
