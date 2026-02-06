@@ -57,4 +57,26 @@ deck.addEventListener('click', () => {
 doneBtn.addEventListener('click', () => {
     cardDisplay.classList.add('hidden');
     deck.classList.remove('hidden');
+/* Định nghĩa hiệu ứng hiện hình */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Đẩy xuống 20px khi bắt đầu */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);    /* Về vị trí cũ */
+    }
+}
+
+/* Áp dụng vào phần chứa câu hỏi */
+.card-content {
+    /* ... các thuộc tính cũ giữ nguyên ... */
+    animation: fadeInUp 0.6s ease-out; /* Chạy hiệu ứng trong 0.6 giây */
+}
+
+/* Thêm một chút hiệu ứng cho nút bấm khi ẩn/hiện */
+#done-btn {
+    animation: fadeInUp 0.8s ease-out;
+}
 });
