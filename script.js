@@ -47,45 +47,14 @@ function getNextQuestion() {
 deck.addEventListener('click', () => {
     const nextQ = getNextQuestion();
     
-    // Cập nhật nội dung câu hỏi
+    // Hiệu ứng hiện câu hỏi
     questionText.innerText = nextQ;
-    
-    // Ẩn bộ bài, hiện thẻ bài
     deck.classList.add('hidden');
     cardDisplay.classList.remove('hidden');
-
-    // MẸO: Reset animation bằng cách xóa và thêm lại class hoặc ép trình duyệt vẽ lại
-    // Ở đây chúng ta chỉ cần đảm bảo card-content luôn được "làm mới"
-    const cardContent = document.querySelector('.card-content');
-    cardContent.style.animation = 'none'; // Tắt animation cũ
-    cardContent.offsetHeight; // Ép trình duyệt load lại (reflow)
-    cardContent.style.animation = null; // Kích hoạt lại animation từ CSS
 });
 
 // Sự kiện quay lại bộ bài
 doneBtn.addEventListener('click', () => {
     cardDisplay.classList.add('hidden');
     deck.classList.remove('hidden');
-/* Định nghĩa hiệu ứng hiện hình */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px); /* Đẩy xuống 20px khi bắt đầu */
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);    /* Về vị trí cũ */
-    }
-}
-
-/* Áp dụng vào phần chứa câu hỏi */
-.card-content {
-    /* ... các thuộc tính cũ giữ nguyên ... */
-    animation: fadeInUp 0.6s ease-out; /* Chạy hiệu ứng trong 0.6 giây */
-}
-
-/* Thêm một chút hiệu ứng cho nút bấm khi ẩn/hiện */
-#done-btn {
-    animation: fadeInUp 0.8s ease-out;
-}
 });
