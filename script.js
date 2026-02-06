@@ -39,13 +39,7 @@ const questionBank = {
         "Ăn vỉa hè vui vẻ hay Nhà hàng sang trọng, yên tĩnh?",
         "Nấu ăn cho người khác hay Được người khác nấu cho ăn?",
         "Biết trước tương lai hay Quay lại quá khứ?",
-        "Sống ở một thành phố không bao giờ ngủ hay một ngôi nhà nhỏ trên thảo nguyên?"
-
-
-
-
-
-            
+        "Sống ở một thành phố không bao giờ ngủ hay một ngôi nhà nhỏ trên thảo nguyên?"            
     ]
 };
 
