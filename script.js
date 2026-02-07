@@ -1,6 +1,6 @@
 // Dữ liệu câu hỏi (Bạn có thể thêm tùy ý vào đây)
 const questionBank = {
-    light: [
+    deep: [
         "Nếu tiền bạc không còn là vấn đề trên thế giới này, bạn sẽ dùng thời gian của mình để làm gì?",
         "Một ngày 'hoàn hảo' đối với bạn trông như thế nào?",
         "Nếu bạn bị người ngoài hành tinh đưa đi mất, bạn sẽ muốn những người còn ở lại nhớ đến bạn vì điều gì?",
@@ -17,9 +17,22 @@ const questionBank = {
         "Sai lầm lớn nhất mà bạn từng mắc phải đã dạy cho bạn bài học gì về cuộc sống?",
         "Bạn quan niệm thế nào là một mối quan hệ 'tự do' trong sự gắn kết?",
         "Điều gì là 'không thể tha thứ' đối với bạn trong tình yêu?",
-        "Biết trước thời điểm một mối quan hệ sẽ kết thúc có phải là một điều may mắn hay không?", 
+        "Biết trước thời điểm một mối quan hệ sẽ kết thúc có phải là một điều may mắn hay không?",
+        "Điều gì từ thời thơ ấu mà bạn vẫn còn mang theo đến tận bây giờ?",
+        "Nếu được gặp lại chính mình năm 10 tuổi, bạn sẽ nói điều gì?",
+        "Một kỷ niệm nào khiến bạn cảm thấy mình thực sự được yêu thương vô điều kiện?",
+        "Bạn của hiện tại có điểm gì khác biệt nhất so với những gì bạn từng hình dung về mình lúc nhỏ?",
+        "Điều gì có thể khiến bạn thức trắng đêm để suy nghĩ?",
+        "Bạn thường làm gì khi cảm thấy thế giới này quá áp lực và mệt mỏi?",
+        "Bạn có rào cản tâm lý nào mà bạn vẫn đang cố gắng vượt qua mỗi ngày không?",
+        "Bạn muốn được đối phương thấu hiểu điều gì nhất ở con người mình mà không cần phải nói ra?",
+        "Điều gì ở một người có thể khiến bạn cảm thấy an tâm ngay lập tức?",
+        "Theo bạn, điều gì là khó khăn nhất trong việc duy trì một mối quan hệ dài lâu?",
+        "Một khoảnh khắc nào trong đời khiến bạn nhận ra mình đã thực sự lớn khôn?",
+        "Điều gì khiến bạn cảm thấy cuộc sống này thực sự đáng sống, dù có bao nhiêu khó khăn?",
+        "Bạn định nghĩa thế nào là một 'ngôi nhà' thực sự?"
     ],
-    deep: [
+    light: [
         "Bạn có sở thích nào mà người khác thường thấy kỳ lạ hoặc khó hiểu không?",
         "Nếu bây giờ có một khóa học miễn phí về bất kỳ kỹ năng nào, bạn sẽ đăng ký học gì ngay lập tức",
         "Có điều gì bạn luôn muốn làm nhưng bấy lâu nay vẫn chưa có cơ hội (hoặc dũng cảm) để thử không?",
@@ -39,7 +52,10 @@ const questionBank = {
         "Ăn vỉa hè vui vẻ hay Nhà hàng sang trọng, yên tĩnh?",
         "Nấu ăn cho người khác hay Được người khác nấu cho ăn?",
         "Biết trước tương lai hay Quay lại quá khứ?",
-        "Sống ở một thành phố không bao giờ ngủ hay một ngôi nhà nhỏ trên thảo nguyên?"            
+        "Sống ở một thành phố không bao giờ ngủ hay một ngôi nhà nhỏ trên thảo nguyên?",        
+        "Nếu trúng số độc đắc vào ngày mai, việc đầu tiên bạn làm là gì?",
+        "Nếu có thể trò chuyện với thú cưng của mình, bạn nghĩ nó sẽ phàn nàn điều gì về bạn?",
+        "Món đồ vô tri nhất mà bạn từng mua là gì?"
     ]
 };
 
